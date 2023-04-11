@@ -297,6 +297,11 @@ func Test_GetRuntime(t *testing.T) {
 			expected:   runtimeRKE,
 		},
 		{
+			name:       "rfo",
+			k8sVersion: "v1.26.3-rfor1",
+			expected:   runtimeRFO,
+		},
+		{
 			name:       "rke2",
 			k8sVersion: "v1.25.5-rke2r2",
 			expected:   runtimeRKE2,
