@@ -46,6 +46,7 @@ const (
 	secretAnnotation      = "rke.cattle.io/object-authorized-for-clusters"
 	runtimeK3S            = "k3s"
 	runtimeRKE2           = "rke2"
+	runtimeRFO            = "rfo"
 	runtimeRKE            = "rke"
 )
 
@@ -375,6 +376,8 @@ func GetRuntime(kubernetesVersion string) string {
 		return runtimeK3S
 	case strings.Contains(kubernetesVersion, runtimeRKE2):
 		return runtimeRKE2
+	case strings.Contains(kubernetesVersion, runtimeRFO):
+		return runtimeRFO
 	case strings.Contains(kubernetesVersion, "-rancher"):
 		return runtimeRKE
 	default:
